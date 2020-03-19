@@ -1,0 +1,36 @@
+@import './color.css';
+@import 'dropdown.css';
+a,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.container {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
+body article div {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+nav .flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+body .title {
+	text-align: center;
+}
+
+body .subtitle {
+	text-align: center;
+}
+
+/* PDF Embedder */
+.pdfobject-container {
+	height: 50rem;
+	border: 1rem solid rgba(0, 0, 0, 0.1);
+}

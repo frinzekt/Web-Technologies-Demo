@@ -1,0 +1,269 @@
+body {
+  color: #545454;
+  background-color: #fafafa;
+}
+
+html .background--color-primary-darker {
+  background-color: hsl(194, 100%, 24%);
+}
+
+html .text--color-primary-darker {
+  color: hsl(194, 100%, 24%);
+}
+
+html .background--color-primary-dark {
+  background-color: hsl(194, 100%, 34%);
+}
+
+html .text--color-primary-dark {
+  color: hsl(194, 100%, 34%);
+}
+
+html .background--color-primary {
+  background-color: hsl(194, 100%, 44%);
+}
+
+html .text--color-primary {
+  color: hsl(194, 100%, 44%);
+}
+
+html .background--color-primary-light {
+  background-color: hsl(194, 100%, 54%);
+}
+
+html .text--color-primary-light {
+  color: hsl(194, 100%, 54%);
+}
+
+html .background--color-primary-lighter {
+  background-color: hsl(194, 100%, 64%);
+}
+
+html .text--color-primary-lighter {
+  color: hsl(194, 100%, 64%);
+}
+
+html .background--color-accent-darker {
+  background-color: hsl(283, 69%, 36%);
+}
+
+html .text--color-accent-darker {
+  color: hsl(283, 69%, 36%);
+}
+
+html .background--color-accent-dark {
+  background-color: hsl(283, 69%, 46%);
+}
+
+html .text--color-accent-dark {
+  color: hsl(283, 69%, 46%);
+}
+
+html .background--color-accent {
+  background-color: hsl(283, 69%, 56%);
+}
+
+html .text--color-accent {
+  color: hsl(283, 69%, 56%);
+}
+
+html .background--color-accent-light {
+  background-color: hsl(283, 69%, 66%);
+}
+
+html .text--color-accent-light {
+  color: hsl(283, 69%, 66%);
+}
+
+html .background--color-accent-lighter {
+  background-color: hsl(283, 69%, 76%);
+}
+
+html .text--color-accent-lighter {
+  color: hsl(283, 69%, 76%);
+}
+
+html .background--color-black {
+  background-color: hsl(0, 0%, 33%);
+}
+
+html .text--color-black {
+  color: hsl(0, 0%, 33%);
+}
+
+html .background--color-white {
+  background-color: hsl(0, 0%, 98%);
+}
+
+html .text--color-white {
+  color: hsl(0, 0%, 98%);
+}
+
+html .background--color-warning-darker {
+  background-color: hsl(37, 100%, 34%);
+}
+
+html .text--color-warning-darker {
+  color: hsl(37, 100%, 34%);
+}
+
+html .background--color-warning-dark {
+  background-color: hsl(37, 100%, 44%);
+}
+
+html .text--color-warning-dark {
+  color: hsl(37, 100%, 44%);
+}
+
+html .background--color-warning {
+  background-color: hsl(37, 100%, 54%);
+}
+
+html .text--color-warning {
+  color: hsl(37, 100%, 54%);
+}
+
+html .background--color-warning-light {
+  background-color: hsl(37, 100%, 64%);
+}
+
+html .text--color-warning-light {
+  color: hsl(37, 100%, 64%);
+}
+
+html .background--color-warning-lighter {
+  background-color: hsl(37, 100%, 74%);
+}
+
+html .text--color-warning-lighter {
+  color: hsl(37, 100%, 74%);
+}
+
+html .background--color-success-darker {
+  background-color: hsl(94, 48%, 36%);
+}
+
+html .text--color-success-darker {
+  color: hsl(94, 48%, 36%);
+}
+
+html .background--color-success-dark {
+  background-color: hsl(94, 48%, 46%);
+}
+
+html .text--color-success-dark {
+  color: hsl(94, 48%, 46%);
+}
+
+html .background--color-success {
+  background-color: hsl(94, 48%, 56%);
+}
+
+html .text--color-success {
+  color: hsl(94, 48%, 56%);
+}
+
+html .background--color-success-light {
+  background-color: hsl(94, 48%, 66%);
+}
+
+html .text--color-success-light {
+  color: hsl(94, 48%, 66%);
+}
+
+html .background--color-success-lighter {
+  background-color: hsl(94, 48%, 76%);
+}
+
+html .text--color-success-lighter {
+  color: hsl(94, 48%, 76%);
+}
+
+html .background--color-error-darker {
+  background-color: hsl(343, 98%, 44%);
+}
+
+html .text--color-error-darker {
+  color: hsl(343, 98%, 44%);
+}
+
+html .background--color-error-dark {
+  background-color: hsl(343, 98%, 54%);
+}
+
+html .text--color-error-dark {
+  color: hsl(343, 98%, 54%);
+}
+
+html .background--color-error {
+  background-color: hsl(343, 98%, 64%);
+}
+
+html .text--color-error {
+  color: hsl(343, 98%, 64%);
+}
+
+html .background--color-error-light {
+  background-color: hsl(343, 98%, 74%);
+}
+
+html .text--color-error-light {
+  color: hsl(343, 98%, 74%);
+}
+
+html .background--color-error-lighter {
+  background-color: hsl(343, 98%, 84%);
+}
+
+html .text--color-error-lighter {
+  color: hsl(343, 98%, 84%);
+}
+
+html .background--color-bg {
+  background-color: hsl(0, 0%, 100%);
+}
+
+html .text--color-bg {
+  color: hsl(0, 0%, 100%);
+}
+
+html .background--color-contrast-lower {
+  background-color: hsl(0, 0%, 95%);
+}
+
+html .text--color-contrast-lower {
+  color: hsl(0, 0%, 95%);
+}
+
+html .background--color-contrast-low {
+  background-color: hsl(240, 1%, 83%);
+}
+
+html .text--color-contrast-low {
+  color: hsl(240, 1%, 83%);
+}
+
+html .background--color-contrast-medium {
+  background-color: hsl(240, 1%, 48%);
+}
+
+html .text--color-contrast-medium {
+  color: hsl(240, 1%, 48%);
+}
+
+html .background--color-contrast-high {
+  background-color: hsl(240, 4%, 20%);
+}
+
+html .text--color-contrast-high {
+  color: hsl(240, 4%, 20%);
+}
+
+html .background--color-contrast-higher {
+  background-color: hsl(240, 8%, 12%);
+}
+
+html .text--color-contrast-higher {
+  color: hsl(240, 8%, 12%);
+}
+/*# sourceMappingURL=color.css.map */

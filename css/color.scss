@@ -1,0 +1,59 @@
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
+	.background#{$color} {
+		background-color: unquote('hsl(#{$hue}, #{$saturation}, #{$lightness})');
+	}
+	.text#{$color} {
+		color: unquote('hsl(#{$hue}, #{$saturation}, #{$lightness})');
+	}
+}
+
+body {
+	color: hsl(0, 0%, 33%);
+	background-color: hsl(0, 0%, 98%);
+}
+//Colors
+html {
+	// main
+
+	@include defineColorHSL(--color-primary-darker, 194, 100%, 24%);
+	@include defineColorHSL(--color-primary-dark, 194, 100%, 34%);
+	@include defineColorHSL(--color-primary, 194, 100%, 44%);
+	@include defineColorHSL(--color-primary-light, 194, 100%, 54%);
+	@include defineColorHSL(--color-primary-lighter, 194, 100%, 64%);
+
+	@include defineColorHSL(--color-accent-darker, 283, 69%, 36%);
+	@include defineColorHSL(--color-accent-dark, 283, 69%, 46%);
+	@include defineColorHSL(--color-accent, 283, 69%, 56%);
+	@include defineColorHSL(--color-accent-light, 283, 69%, 66%);
+	@include defineColorHSL(--color-accent-lighter, 283, 69%, 76%);
+
+	@include defineColorHSL(--color-black, 0, 0%, 33%);
+	@include defineColorHSL(--color-white, 0, 0%, 98%);
+
+	// feedback
+	@include defineColorHSL(--color-warning-darker, 37, 100%, 34%);
+	@include defineColorHSL(--color-warning-dark, 37, 100%, 44%);
+	@include defineColorHSL(--color-warning, 37, 100%, 54%);
+	@include defineColorHSL(--color-warning-light, 37, 100%, 64%);
+	@include defineColorHSL(--color-warning-lighter, 37, 100%, 74%);
+
+	@include defineColorHSL(--color-success-darker, 94, 48%, 36%);
+	@include defineColorHSL(--color-success-dark, 94, 48%, 46%);
+	@include defineColorHSL(--color-success, 94, 48%, 56%);
+	@include defineColorHSL(--color-success-light, 94, 48%, 66%);
+	@include defineColorHSL(--color-success-lighter, 94, 48%, 76%);
+
+	@include defineColorHSL(--color-error-darker, 343, 98%, 44%);
+	@include defineColorHSL(--color-error-dark, 343, 98%, 54%);
+	@include defineColorHSL(--color-error, 343, 98%, 64%);
+	@include defineColorHSL(--color-error-light, 343, 98%, 74%);
+	@include defineColorHSL(--color-error-lighter, 343, 98%, 84%);
+
+	// color contrasts
+	@include defineColorHSL(--color-bg, 0, 0%, 100%);
+	@include defineColorHSL(--color-contrast-lower, 0, 0%, 95%);
+	@include defineColorHSL(--color-contrast-low, 240, 1%, 83%);
+	@include defineColorHSL(--color-contrast-medium, 240, 1%, 48%);
+	@include defineColorHSL(--color-contrast-high, 240, 4%, 20%);
+	@include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
+}
