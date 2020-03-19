@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CSS</title>
+
+	<!-- Boostrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<nav id="nav"></nav>
+	<article class="container">
+		<h3 class="title">Cascading Style Sheets (CSS)</h3>
+
+		<div>
+			<h4>Without CSS</h4>
+			<p>Without CSS, Websites will look very plain. Press Button Below To See What This Website looks like
+				without CSS</p>
+			<button class="btn text--color-white background--color-error" id="explode">Explode</button>
+			<button class="btn text--color-white background--color-success" id="implode" disabled>Put The CSS Back</button>
+		</div>
+		<div>
+			<h4>Purpose and Motivation</h4>
+			<p>
+				The purpose of CSS is to provide design and decorate towards the content (Layout). It makes the content
+				more appealing and
+				presentable especially for the users of the web.
+			</p>
+			<p>
+				The main benefit of separation of styling is
+				<ul>
+					<li>
+						<p>
+							COnsisTENcY oF dESigN
+						</p>
+						<p>Most web applications will have multiple page or simulated pages (for SPA) wherein the design
+							has to be the same for consistency. <span style="text-decoration: underline;">IT iS noT
+								a</span> <span class="text--color-accent">goOD IdEa</span> <span
+								class="text--color-primary">tO HAVE INCOnSiSTeNt deSIgn</span>
+							<span class="text--color-warning">L</span><span class="text--color-success">I</span><span
+								class="text--color-error">k</span><span class="text--color-accent">e</span> T<span
+								class="text--color-error">
+								His BecAUSe
+								it LoseS
+							</span> <span class="text--color-success">iTS BRanDInG aND MAkeS</span> it a looK LiKE iT'S
+							JOkE</p>
+					</li>
+					<li>
+						<p>
+							Code Modularity
+						</p>
+						<p>This is important in maintaining code base as it makes it easier to add extra features when
+							needed. For example is it easier to navigate like this:</p>
+
+						<div>
+							<div class="btn-group-vertical">
+								<div class="btn-group">
+									<button type="button" class="btn btn-primary dropdown-toggle"
+										data-toggle="dropdown">
+										Sony
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Tablet</a>
+										<a class="dropdown-item" href="#">Smartphone</a>
+									</div>
+								</div> <div class="btn-group">
+									<button type="button" class="btn btn-primary dropdown-toggle"
+										data-toggle="dropdown">
+										Sony
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Tablet</a>
+										<a class="dropdown-item" href="#">Smartphone</a>
+									</div>
+								</div>
+								<div class="btn-group">
+									<button type="button" class="btn btn-primary dropdown-toggle"
+										data-toggle="dropdown">
+										Sony
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Tablet</a>
+										<a class="dropdown-item" href="#">Smartphone</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						or
+					</li>
+
+					<li>Separation of Content and Design</li>
+				</ul>
+			</p>
+		</div>
+	</article>
+	<footer id="footer"></footer>
+
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+	</script>
+
+	<!-- BOOSTRAP JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
+
+	<!-- My Bundled Component Script -->
+	<script src="dist/bundle.js"></script>
+	<script>
+		$(document).ready(function () {
+			//Remove CSS
+			$('#explode').click(function () {
+				$("link[rel='stylesheet']").remove();
+
+				//BUTTON Enable/Disable
+				$('#explode').attr('disabled', true);
+				$('#implode').attr('disabled', false);
+			});
+
+			//Add CSS
+			$('#implode').click(function () {
+				$('head').append(
+					'<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>'
+				);
+				$('head').append('<link rel="stylesheet" href="css/style.css" type="text/css" />');
+				//BUTTON Enable/Disable
+				$('#explode').attr('disabled', false);
+				$('#implode').attr('disabled', true);
+			});
+		});
+	</script>
+
+</body>
+
+</html>
