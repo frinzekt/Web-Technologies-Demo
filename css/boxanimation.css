@@ -1,0 +1,150 @@
+.wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 5% auto;
+}
+
+.box-area {
+  -webkit-animation: animate 10s ease-in-out infinite;
+          animation: animate 10s ease-in-out infinite;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 100px 100px 0;
+          transform-origin: 100px 100px 0;
+}
+
+.box-area div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+}
+
+.box-area .box1 {
+  background-color: white;
+  background-image: url("../asset/img/1.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.box-area .box2 {
+  background-color: white;
+  background-image: url("../asset/img/2.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.box-area .box3 {
+  background-color: white;
+  background-image: url("../asset/img/3.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.box-area .box4 {
+  background-color: white;
+  background-image: url("../asset/img/4.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.box-area .box5 {
+  background-color: white;
+  background-image: url("../asset/img/5.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.box-area .box6 {
+  background-color: white;
+  background-image: url("../asset/img/6.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.box-area .box1 {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.box-area .box2 {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+}
+
+.box-area .box3 {
+  -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+          transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+
+.box-area .box4 {
+  -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+          transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+
+.box-area .box5 {
+  -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+          transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+
+.box-area .box6 {
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+          transform: rotateX(-90deg) translateZ(100px);
+}
+
+@-webkit-keyframes animate {
+  from,
+  to {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    -webkit-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+            transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+  }
+  33% {
+    -webkit-transform: rotateX(0deg) rotateY(-90deg) rotateZ(90deg);
+            transform: rotateX(0deg) rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    -webkit-transform: rotateX(0deg) rotateY(-180deg) rotateZ(90deg);
+            transform: rotateX(0deg) rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    -webkit-transform: rotateX(90deg) rotateY(-180deg) rotateZ(90deg);
+            transform: rotateX(90deg) rotateY(-180deg) rotateZ(90deg);
+  }
+  83% {
+    -webkit-transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes animate {
+  from,
+  to {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    -webkit-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+            transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+  }
+  33% {
+    -webkit-transform: rotateX(0deg) rotateY(-90deg) rotateZ(90deg);
+            transform: rotateX(0deg) rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    -webkit-transform: rotateX(0deg) rotateY(-180deg) rotateZ(90deg);
+            transform: rotateX(0deg) rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    -webkit-transform: rotateX(90deg) rotateY(-180deg) rotateZ(90deg);
+            transform: rotateX(90deg) rotateY(-180deg) rotateZ(90deg);
+  }
+  83% {
+    -webkit-transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+/*# sourceMappingURL=boxanimation.css.map */
