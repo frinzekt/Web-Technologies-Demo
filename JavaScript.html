@@ -57,15 +57,29 @@
 		<!-- My Bundled Component Script -->
 		<script src="dist/bundle.js"></script>
 		<script>
-			$(document).ready(function() {
-				$.ajax({
-					url: 'http://localhost:3001/api/log', //'https://electronic-card-logger.now.sh/api/log',
-					type: 'GET',
-					success: data => {
-						console.log(data);
-					}
+			(async () => {
+				const data = await (await fetch('http://localhost:3000/api/token')).json();
+				const trackId = '0MQpgi6zSeof8DKvc9ymZO';
+
+				const requestParams = {
+					method: 'GET',
+					headers: { Authorization: 'Bearer ' + data.accessToken }
+				};
+				const spotifyData = await (await fetch(`https://api.spotify.com/v1/albums/${trackId}/tracks`, requestParams)).json();
+				const spotifyDataRFU = await spotifyData.items.map(async ({ name, id, artists, preview_url }) => {
+					const songIndividualData = await (await fetch(`https://api.spotify.com/v1/tracks/${id}`, requestParams)).json();
+					const pictureUrl = songIndividualData.album.images[0].url;
+					console.log('FETCH INDIVIDUAL', pictureUrl);
+					return {
+						id,
+						name,
+						artist: artists[0].name,
+						preview_url,
+						pictureUrl
+					};
 				});
-			});
+				Promise.all(spotifyDataRFU).then(results => console.log(results));
+			})();
 		</script>
 	</body>
 </html>
