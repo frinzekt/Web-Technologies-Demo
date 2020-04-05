@@ -1,5 +1,7 @@
+@import './boxanimation.css';
+@import './sidebar.css';
 @import './color.css';
-@import 'dropdown.css';
+
 a,
 a:hover {
 	text-decoration: none;
@@ -27,6 +29,10 @@ body .title {
 
 body .subtitle {
 	text-align: center;
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* PDF Embedder */
