@@ -1,0 +1,64 @@
+@import './boxanimation.scss';
+@import './sidebar.scss';
+@import './color.scss';
+@import './song.scss';
+@import './code.scss';
+
+a,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.container {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
+body article div > h4:first-child,
+form {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+nav .flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+body {
+	overflow-x: hidden;
+	h1,
+	h2,
+	h3.title {
+		text-align: center;
+		color: primary(40%);
+	}
+	h4 {
+		color: accent(50%);
+	}
+	h5 {
+		color: warning(50%);
+	}
+	.subtitle {
+		text-align: center;
+	}
+}
+
+.nav-item {
+	margin: 0 20 px;
+
+	.fab {
+		margin: 0 10px;
+	}
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* PDF Embedder */
+.pdfobject-container {
+	height: 50rem;
+	border: 1rem solid rgba(0, 0, 0, 0.1);
+}

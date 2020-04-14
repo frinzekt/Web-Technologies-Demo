@@ -6,6 +6,27 @@
 		color: unquote('hsl(#{$hue}, #{$saturation}, #{$lightness})');
 	}
 }
+@function primary($lightness: 50%) {
+	@return hsl(194, 100%, $lightness);
+}
+@function accent($lightness: 50%) {
+	@return hsl(283, 69%, $lightness);
+}
+@function black($lightness: 50%) {
+	@return hsl(0, 0%, $lightness);
+}
+@function white($lightness: 50%) {
+	@return hsl(0, 0%, $lightness);
+}
+@function success($lightness: 50%) {
+	@return hsl(94, 48%, $lightness);
+}
+@function warning($lightness: 50%) {
+	@return hsl(37, 100%, $lightness);
+}
+@function error($lightness: 50%) {
+	@return hsl(343, 98%, $lightness);
+}
 
 body {
 	color: hsl(0, 0%, 33%);
