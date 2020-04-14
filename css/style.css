@@ -13,7 +13,8 @@ a:hover {
 	margin-bottom: 10vh;
 }
 
-body article div {
+body article div > h4:first-child,
+form {
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
@@ -39,4 +40,46 @@ body .subtitle {
 .pdfobject-container {
 	height: 50rem;
 	border: 1rem solid rgba(0, 0, 0, 0.1);
+}
+
+/* @media only screen and (min-width: 768px) {
+	.song {
+		border-radius: 25px;
+	}
+} */
+.song-description {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	margin: 0px;
+}
+
+.song-preview {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.avatar-root {
+	margin: 10px 10px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	overflow: hidden;
+	position: relative;
+	font-size: 1.25rem;
+	align-items: center;
+	flex-shrink: 0;
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+	line-height: 1;
+	user-select: none;
+	border-radius: 50%;
+	justify-content: center;
+}
+.avatar {
+	color: transparent;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	text-align: center;
+	text-indent: 10000px;
 }
