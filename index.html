@@ -3,7 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Homepage - Frinze Lapuz</title>
+
+		<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="asset/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="asset/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href=asset/favicon"/favicon-16x16.png" />
+		<link rel="manifest" href="asset/favicon/site.webmanifest" />
 
 		<!-- Boostrap CSS -->
 		<link
@@ -12,39 +18,51 @@
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 			crossorigin="anonymous"
 		/>
+		<!-- BUNDLED STYLED CSS -->
 		<link rel="stylesheet" href="css/style.css" />
+		<!-- FONT AWESOME -->
+		<script src="https://kit.fontawesome.com/a8ac385079.js" crossorigin="anonymous"></script>
+		<!-- HTML SYNTAX HIGHLIGHTER -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 	</head>
 	<body>
-		<nav id="nav"></nav>
-		<article class="container">
-			<h3 class="title">Frinze Erin Lapuz</h3>
-			<h4 class="subtitle">Software Engineering and Data Science Student</h4>
-			<h4>Currently Doing</h4>
-			<div class="row">
-				<div class="col s6 m6">
-					<p>
-						Currently in software engineering, I am spending a lot of time practicing Full-Stack Development with MERN (MongoDB, Express,
-						React, Node) along with different libraries and frameworks associated with it.
-					</p>
-					<p>
-						With Data Science, I am spending a lot of time with Tableau,Python and JavaScript Libraries to use API or manipulate data in
-						order for visualization.
-					</p>
-					<p>
-						If you want more details about me, check out my primary website
-						<a href="https://frinzelapuz.now.sh/" style="text-decoration: underline;">here</a>
-					</p>
-				</div>
-				<div class="col s6 m6">
-					<img src="asset/img/picture.jpg" alt="My Image" style="width:100%" />
-				</div>
-			</div>
+		<div class="d-flex" id="wrapper">
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper"></div>
 
-			<div class="cv">
-                <h4>Resume / CV</h4>
-                			<div id="cv"></div>
-            </div>
-		</article>
+			<div id="page-content-wrapper">
+				<nav id="nav"></nav>
+				<article class="container">
+					<h3 class="title">Frinze Erin Lapuz</h3>
+					<h4 class="subtitle">Software Engineering and Data Science Student</h4>
+					<h4>Currently Doing</h4>
+					<div class="row">
+						<div class="col s6 m6">
+							<p>
+								Currently in software engineering, I am spending a lot of time practicing Full-Stack Development with MERN (MongoDB,
+								Express, React, Node) along with different libraries and frameworks associated with it.
+							</p>
+							<p>
+								With Data Science, I am spending a lot of time with Tableau,Python and JavaScript Libraries to use API or manipulate data in
+								order for visualization.
+							</p>
+							<p>
+								If you want more details about me, check out my primary website
+								<a href="https://frinzelapuz.now.sh/" style="text-decoration: underline;">here</a>
+							</p>
+						</div>
+						<div class="col s6 m6">
+							<img src="asset/img/picture.jpg" alt="My Image" style="width: 100%;" />
+						</div>
+					</div>
+
+					<div class="cv">
+						<h4>Resume / CV</h4>
+						<div id="cv"></div>
+					</div>
+				</article>
+			</div>
+		</div>
 		<footer id="footer"></footer>
 
 		<!-- PDF EMBEDDER -->
@@ -74,5 +92,8 @@
 
 		<!-- My Bundled Component Script -->
 		<script src="dist/bundle.js"></script>
+		<script>
+			initNavBar('Homepage');
+		</script>
 	</body>
 </html>

@@ -3,7 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>JavaScript - Frinze Lapuz</title>
+
+		<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="asset/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="asset/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href=asset/favicon"/favicon-16x16.png" />
+		<link rel="manifest" href="asset/favicon/site.webmanifest" />
 
 		<!-- Boostrap CSS -->
 		<link
@@ -12,34 +18,75 @@
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 			crossorigin="anonymous"
 		/>
+		<!-- BUNDLED STYLED CSS -->
 		<link rel="stylesheet" href="css/style.css" />
+		<!-- FONT AWESOME -->
+		<script src="https://kit.fontawesome.com/a8ac385079.js" crossorigin="anonymous"></script>
+		<!-- HTML SYNTAX HIGHLIGHTER -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 	</head>
-	<body>
-		<nav id="nav"></nav>
-		<article class="container">
-			<h3>JavaScript</h3>
-			<div>
-				<h4>What Is JavaScript in the Web?</h4>
-				<p>
-					JavaScript is the programming language that drives the interactivity of content in the web. It makes it intuitive and enhances the
-					user experience (UX) (Note: CSS focuses on user interface (UI)).
-				</p>
-			</div>
-			<div>
-				<h4>Asynchonous JavaScript and XML (AJAX)</h4>
-				<p>
-					AJAX is the dream of any web developer, to be able to fetch data without the need of refreshing the page. AJAX is a method most often used with API sources serving data usually in the form of Javascript Object Notation (JSON) in order to fetch data. This data could be anything, a response error, a payload or even HTML and CSS (most common for Single-page Applications). Unlike a usual web HTTP request, AJAX is not only limited to GET request, it can also perform POST request that can contain an request body that can be used for sending data to the server. There multiple "fake" HTML request that are supported in the browser, such as PUT and DELETE, but only GET and POST are supported by HTML. See W3C HTML 5.0 spec.
-				</p>
 
-				<h5>AJAX Demo</h5>
-				<div id="ajax-demo"></div>
+	<body>
+		<div class="d-flex" id="wrapper">
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper"></div>
+
+			<div id="page-content-wrapper">
+				<nav id="nav"></nav>
+				<article class="container">
+					<h3 class="title">JavaScript</h3>
+					<div>
+						<h4>What Is JavaScript in the Web?</h4>
+						<p>
+							JavaScript is the programming language that drives the interactivity of content in the web. It makes it intuitive and enhances
+							the user experience (UX) (Note: CSS focuses on user interface (UI)).
+						</p>
+					</div>
+					<div>
+						<h4>Asynchonous JavaScript and XML (AJAX)</h4>
+						<p>
+							AJAX is the dream of any web developer, to be able to fetch data without the need of refreshing the page. AJAX is a method
+							most often used with API sources serving data usually in the form of Javascript Object Notation (JSON) in order to fetch data.
+							This data could be anything, a response error, a payload or even HTML and CSS (most common for Single-page Applications).
+							Unlike a usual web HTTP request, AJAX is not only limited to GET request, it can also perform POST request that can contain an
+							request body that can be used for sending data to the server. There multiple "fake" HTML request that are supported in the
+							browser, such as PUT and DELETE, but only GET and POST are supported by HTML. See W3C HTML 5.0 spec.
+						</p>
+
+						<h5>Spotify Song Demo: AJAX and DOM Manipulation</h5>
+						<form onsubmit="searchSongs(event)">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search" name="search" />
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+						<div id="ajax-demo" class="row"></div>
+					</div>
+					<div>
+						<h5>How It Works</h5>
+						<p>
+							Firstly, this web application will request authorization to access data. This specific web application is communicating with a
+							node server built by me that contains the secret keys in order to contact spotify server. The spotify server will respond to
+							the node server, then respond with an authentication that is stored as a variable here.
+						</p>
+						<p>
+							After the acquisition of authorization token, this web application will contact the spotify server as well as providing the
+							token. The spotify server will respond with the data specified in the endpoint. In this case, it will access the 3 Endpoints:
+							"search", "album" and "song" endpoints.
+						</p>
+						<p>
+							After acquiring all the data from the endpoints, it is packaged into a smaller object variable, and passed into functions that
+							will manipulate the DOM (add, remove songs)
+						</p>
+						<p>Unfortunately, some songs don't have preview url, in order to display as demo.</p>
+					</div>
+				</article>
 			</div>
-			<p>
-				Cupidatat qui velit esse consectetur elit quis tempor eu irure non Lorem. Culpa velit amet duis do proident Lorem ullamco
-				exercitation aute magna minim. Sint Lorem est sunt laboris consectetur est nisi Lorem ullamco id nisi est. Et tempor deserunt
-				exercitation anim laboris labore irure incididunt elit amet nostrud Lorem excepteur. Eu duis labore proident laboris id consectetur.
-			</p>
-		</article>
+		</div>
 		<footer id="footer"></footer>
 
 		<!-- Jquery -->
@@ -60,30 +107,106 @@
 
 		<!-- My Bundled Component Script -->
 		<script src="dist/bundle.js"></script>
+		<!-- Specific Script -->
 		<script>
-			(async () => {
-				const data = await (await fetch('http://localhost:3000/api/token')).json();
-				const trackId = '0MQpgi6zSeof8DKvc9ymZO';
+			initNavBar('JavaScript');
+		</script>
+		<script>
+			const getToken = async () => {
+				const data = await (await fetch('https://spotify-token-authenticator.frinzelapuz.now.sh/api/token')).json();
+				localStorage.setItem('accessToken', data.accessToken);
+				return data.accessToken;
+			};
+
+			const addSong = ({ id, name, artist, preview_url, pictureUrl }) => {
+				const container = document.querySelector('#ajax-demo');
+
+				// Simulated JSX - JavaScript in XML/HTML
+				container.innerHTML += `<div class="col-md-12 col-sm-12 background--color-contrast-high text--color-white song" style="padding:10px;margin:0px">
+						<div class="row" style="margin:0px">
+							<div class="song-description col-md-6 col-sm-12" >
+								<div class="avatar-root">
+									<img class="avatar" src="${pictureUrl}" alt="" />
+								</div>
+								<div style="margin: 0px;">
+									<div style="margin: 0px;">
+										${name}
+									</div>
+									<div style="margin: 0px;">
+										${artist}
+									</div>
+								</div>
+
+							</div>
+							<div class="col-md-6 col-sm-12 song-preview">
+								${
+									preview_url
+										? `<audio controls style="width:100%;height:3em"/>
+									<source
+										src="${preview_url}"
+										type="audio/mpeg">
+									Your browser does not support the audio element.
+								</audio>`
+										: `Preview Not Available `
+								}
+							</div>
+						</div>
+					</div>`;
+			};
+			const removeSongs = () => {
+				const container = document.querySelector('#ajax-demo');
+				container.innerHTML = '';
+			};
+
+			const searchSongs = async (e) => {
+				e.preventDefault();
+				removeSongs();
+				const accessToken = await getToken();
+				const formData = $('form').serializeArray()[0].value;
+				const requestParams = {
+					method: 'GET',
+					headers: {
+						Authorization: 'Bearer ' + accessToken,
+						'Content-Type': 'application/json',
+						Accept: 'application/json',
+					},
+				};
+
+				const spotifyData = await (
+					await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(formData.trim())}&type=album`, requestParams)
+				).json();
+
+				//If Everything is a single, load all 20 singles
+				if (spotifyData.albums.items.every((album) => album.album_type == 'single')) {
+					spotifyData.albums.items.forEach((album) => loadSongs(album.id));
+				} else {
+					loadSongs(spotifyData.albums.items[0].id);
+				}
+			};
+			const loadSongs = async (trackId = '0MQpgi6zSeof8DKvc9ymZO', callbackfn) => {
+				const accessToken = await getToken();
 
 				const requestParams = {
 					method: 'GET',
-					headers: { Authorization: 'Bearer ' + data.accessToken }
+					headers: {
+						Authorization: 'Bearer ' + accessToken,
+					},
 				};
 				const spotifyData = await (await fetch(`https://api.spotify.com/v1/albums/${trackId}/tracks`, requestParams)).json();
 				const spotifyDataRFU = await spotifyData.items.map(async ({ name, id, artists, preview_url }) => {
 					const songIndividualData = await (await fetch(`https://api.spotify.com/v1/tracks/${id}`, requestParams)).json();
 					const pictureUrl = songIndividualData.album.images[0].url;
-					console.log('FETCH INDIVIDUAL', pictureUrl);
 					return {
 						id,
 						name,
 						artist: artists[0].name,
 						preview_url,
-						pictureUrl
+						pictureUrl,
 					};
 				});
-				Promise.all(spotifyDataRFU).then(results => console.log(results));
-			})();
+				Promise.all(spotifyDataRFU).then((results) => results.map((song) => addSong(song)));
+			};
+			loadSongs();
 		</script>
 	</body>
 </html>

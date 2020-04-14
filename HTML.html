@@ -3,7 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>HyperText Markup Language</title>
+		<title>HyperText Markup Language - Frinze Lapuz</title>
+
+		<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="asset/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="asset/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href=asset/favicon"/favicon-16x16.png" />
+		<link rel="manifest" href="asset/favicon/site.webmanifest" />
+
 		<!-- Boostrap CSS -->
 		<link
 			rel="stylesheet"
@@ -11,27 +18,21 @@
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 			crossorigin="anonymous"
 		/>
+		<!-- BUNDLED STYLED CSS -->
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<!-- FONT AWESOME -->
+		<script src="https://kit.fontawesome.com/a8ac385079.js" crossorigin="anonymous"></script>
 		<!-- HTML SYNTAX HIGHLIGHTER -->
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 	</head>
 
 	<body>
-		<div class="d-flex toggled" id="wrapper">
+		<div class="d-flex" id="wrapper">
 			<!-- Sidebar -->
-			<div class="bg-light border-right" id="sidebar-wrapper">
-				<div class="sidebar-heading">Live HTML DOM Viewer</div>
-				<pre id="liveCodeContainer" style="padding: 15px;">
-					<code id="liveCode" class="hljs html" style="min-height:75vh;max-height:75vh;max-width:23vw"> </code>
-				</pre>
-			</div>
-			<!-- /#sidebar-wrapper -->
+			<div id="sidebar-wrapper"></div>
 
 			<div id="page-content-wrapper">
 				<nav id="nav"></nav>
-				<button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 				<article class="container">
 					<h3 class="title text--color-primary">HyperText Markup Language (HTML)</h3>
 					<p>
@@ -39,7 +40,7 @@
 						<a class="text--color-primary-lighter" href="https://www.w3schools.in/html-tutorial/history/">here</a>
 					</p>
 					<div id="intro">
-						<h4 class="text--color-accent">What is it?</h4>
+						<h4 class="">What is it?</h4>
 
 						<p>
 							HTML is a standard markup language for documents to be displayed in web browser. It serves as the layout of the document's
@@ -47,34 +48,34 @@
 						</p>
 					</div>
 					<div id="history">
-						<h4 class="text--color-accent">History</h4>
+						<h4 class="">History</h4>
 						<div>
-							<h5 class="text--color-accent-light">1991-1993: Basic Creation (HTML 1.0)</h5>
+							<h5 class="">1991-1993: Basic Creation (HTML 1.0)</h5>
 							<p>
 								Tim Berners Lee created the HTML in the late 1991, and released HTML 1.0 in 1993. This is created to share information that
 								is readable and accessible via web browsers
 							</p>
 						</div>
 						<div>
-							<h5 class="text--color-accent-light">1995-1997: Official Release of HTML (HTML 2.0)</h5>
+							<h5 class="">1995-1997: Official Release of HTML (HTML 2.0)</h5>
 							<p>
 								Official publication of HTML as HTML 2.0 which contains all the features of HTML 1.0 along with additional features. HTML
 								became the official standard markup language for designing and creating websites, and refined various core features of HTML
 							</p>
 						</div>
 						<div>
-							<h5 class="text--color-accent-light">1997: (HTML 3.0)</h5>
+							<h5 class="">1997: (HTML 3.0)</h5>
 							<p>
 								HTML 3.0 was drafted by Dave Ragget which included new features of HTML, introducing more powerful features and
 								characteristics for designing webpage, but these features also slowed down the browser
 							</p>
 						</div>
 						<div>
-							<h5 class="text--color-accent-light">IDK: (HTML 4.01)</h5>
+							<h5 class="">IDK: (HTML 4.01)</h5>
 							<p>a</p>
 						</div>
 						<div>
-							<h5 class="text--color-accent-light">2012 - Today: (HTML 5.0)</h5>
+							<h5 class="">2012 - Today: (HTML 5.0)</h5>
 							<p>a</p>
 						</div>
 					</div>
@@ -107,29 +108,9 @@
 
 		<!-- My Bundled Component Script -->
 		<script src="dist/bundle.js"></script>
+		<!-- Specific Script -->
 		<script>
-			document.onmouseover = e => {
-				const codeDiv = document.querySelector('#liveCode');
-				const codeContainer = document.querySelector('#liveCodeContainer');
-				if (e.target == codeDiv || e.target == codeContainer) {
-					//codeDiv.textContent = 'Recursion... Very Naughty!!';
-				} else {
-					//CHANGE TEXT AND HIGHLIGHT ELEMENT
-					codeDiv.textContent = e.target.outerHTML;
-					e.target.classList.add('overlay');
-				}
-			};
-
-			document.onmouseout = e => {
-				e.target.classList.remove('overlay');
-			};
-		</script>
-		<!-- Menu Toggle Script -->
-		<script>
-			$('#menu-toggle').click(function(e) {
-				e.preventDefault();
-				$('#wrapper').toggleClass('toggled');
-			});
+			initNavBar('HTML');
 		</script>
 	</body>
 </html>
