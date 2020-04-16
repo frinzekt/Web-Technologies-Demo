@@ -7,7 +7,7 @@ window.isDOMViewEnabled = false;
 import Appender from './HTMLappender';
 
 // Component JS
-import Nav from './components/Nav';
+import Nav from './components/NavBar';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 
