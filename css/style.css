@@ -530,6 +530,7 @@ html .text--color-contrast-higher {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0px;
 }
 
 .avatar-root {
@@ -580,67 +581,67 @@ pre#liveCodeContainer code#liveCode {
   max-width: 100%;
 }
 
-pre .hljs-comment,
-pre .hljs-title {
+.hljs-comment,
+.hljs-title {
   color: #969896;
 }
 
-pre .hljs-variable,
-pre .hljs-attribute,
-pre .hljs-tag,
-pre .hljs-regexp,
-pre .hljs-ruby .hljs-constant,
-pre .hljs-xml .hljs-tag .hljs-title,
-pre .hljs-xml .hljs-pi,
-pre .hljs-xml .hljs-doctype,
-pre .hljs-html .hljs-doctype,
-pre .hljs-css .hljs-id,
-pre .hljs-css .hljs-class,
-pre .hljs-css .hljs-pseudo {
-  color: #569CD6;
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.hljs-ruby .hljs-constant,
+.hljs-xml .hljs-tag .hljs-title,
+.hljs-xml .hljs-pi,
+.hljs-xml .hljs-doctype,
+.hljs-html .hljs-doctype,
+.hljs-css .hljs-id,
+.hljs-css .hljs-class,
+.hljs-css .hljs-pseudo {
+  color: #569cd6;
 }
 
-pre .hljs-number,
-pre .hljs-preprocessor,
-pre .hljs-built_in,
-pre .hljs-literal,
-pre .hljs-params,
-pre .hljs-constant {
+.hljs-number,
+.hljs-preprocessor,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
   color: #e78c45;
 }
 
-pre .hljs-class,
-pre .hljs-ruby .hljs-class .hljs-title,
-pre .hljs-css .hljs-rules .hljs-attribute {
+.hljs-class,
+.hljs-ruby .hljs-class .hljs-title,
+.hljs-css .hljs-rules .hljs-attribute {
   color: #e7c547;
 }
 
-pre .hljs-string,
-pre .hljs-value,
-pre .hljs-inheritance,
-pre .hljs-header,
-pre .hljs-ruby .hljs-symbol,
-pre .hljs-xml .hljs-cdata {
-  color: #D69D85;
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.hljs-ruby .hljs-symbol,
+.hljs-xml .hljs-cdata {
+  color: #d69d85;
 }
 
-pre .hljs-css .hljs-hexcolor {
+.hljs-css .hljs-hexcolor {
   color: #70c0b1;
 }
 
-pre .hljs-function,
-pre .hljs-python .hljs-decorator,
-pre .hljs-python .hljs-title,
-pre .hljs-ruby .hljs-function .hljs-title,
-pre .hljs-ruby .hljs-title .hljs-keyword,
-pre .hljs-perl .hljs-sub,
-pre .hljs-javascript .hljs-title,
-pre .hljs-coffeescript .hljs-title {
+.hljs-function,
+.hljs-python .hljs-decorator,
+.hljs-python .hljs-title,
+.hljs-ruby .hljs-function .hljs-title,
+.hljs-ruby .hljs-title .hljs-keyword,
+.hljs-perl .hljs-sub,
+.hljs-javascript .hljs-title,
+.hljs-coffeescript .hljs-title {
   color: #7aa6da;
 }
 
-pre .hljs-keyword,
-pre .hljs-javascript .hljs-function {
+.hljs-keyword,
+.hljs-javascript .hljs-function {
   color: #c397d8;
 }
 
@@ -656,33 +657,58 @@ pre code {
   overflow-x: scroll;
 }
 
-a,
-a:hover {
-  text-decoration: none;
-  color: inherit;
+.loader {
+  border-top: 15px solid #00c4ff;
+  border-right: 15px solid #a628d7;
+  border-bottom: 15px solid #77bd42;
+  border-left: 15px solid #ff9d00;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
-.container {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
-body article div > h4:first-child,
-form {
-  margin-top: 15px;
-  margin-bottom: 15px;
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
-nav .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#Homepage:hover {
+  color: #77bd42;
 }
 
-body {
+#HTML:hover {
+  color: #ff9d00;
+}
+
+#CSS:hover {
+  color: #00c4ff;
+}
+
+#JavaScript:hover {
+  color: #fd356e;
+}
+
+html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -703,6 +729,45 @@ body h5 {
 
 body .subtitle {
   text-align: center;
+}
+
+body article div {
+  position: relative;
+  margin-left: 10px;
+}
+
+a {
+  color: #00c4ff;
+}
+
+a:hover {
+  color: #007599;
+}
+
+.container {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+body article div > h4:first-child,
+form {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+nav a,
+nav a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav-item {

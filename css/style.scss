@@ -1,33 +1,19 @@
+// DIFFERENT CSS SECTIONS
 @import './boxanimation.scss';
 @import './sidebar.scss';
 @import './color.scss';
 @import './song.scss';
 @import './code.scss';
+@import './loader.scss';
+@import './navlinks.scss';
 
-a,
-a:hover {
-	text-decoration: none;
-	color: inherit;
-}
+// GENERAL FORMATS FOR ALL
 
-.container {
-	margin-top: 10vh;
-	margin-bottom: 10vh;
-}
-
-body article div > h4:first-child,
-form {
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-
-nav .flex-container {
-	display: flex;
-	justify-content: space-between;
-}
-
-body {
+html {
+	scroll-behavior: smooth;
 	overflow-x: hidden;
+}
+body {
 	h1,
 	h2,
 	h3.title {
@@ -43,6 +29,39 @@ body {
 	.subtitle {
 		text-align: center;
 	}
+	article div {
+		position: relative;
+		margin-left: 10px;
+	}
+}
+
+a {
+	color: primary(50%);
+}
+a:hover {
+	color: primary(30%);
+}
+.container {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
+body article div > h4:first-child,
+form {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+nav {
+	a,
+	a:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+nav .flex-container {
+	display: flex;
+	justify-content: space-between;
 }
 
 .nav-item {

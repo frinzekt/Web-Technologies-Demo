@@ -1,0 +1,16 @@
+#Homepage:hover {
+  color: success();
+}
+
+#HTML:hover {
+  color: warning();
+}
+
+#CSS:hover {
+  color: primary();
+}
+
+#JavaScript:hover {
+  color: error(60%);
+}
+/*# sourceMappingURL=navlinks.css.map */

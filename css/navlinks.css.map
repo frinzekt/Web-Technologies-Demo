@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,AAAA,MAAM,CAAC;EACf,KAAK,EAAE,SAAS;CAChB;;AACD,AAAA,KAAK,AAAA,MAAM,CAAC;EACX,KAAK,EAAE,SAAS;CAChB;;AACD,AAAA,IAAI,AAAA,MAAM,CAAC;EACV,KAAK,EAAE,SAAS;CAChB;;AACD,AAAA,WAAW,AAAA,MAAM,CAAC;EACjB,KAAK,EAAE,UAAU;CACjB",
+    "sources": [
+        "navlinks.scss"
+    ],
+    "names": [],
+    "file": "navlinks.css"
+}

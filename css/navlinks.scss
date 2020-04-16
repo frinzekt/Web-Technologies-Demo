@@ -1,0 +1,18 @@
+#Homepage:hover {
+	color: success();
+}
+#HTML:hover {
+	color: warning();
+}
+#CSS:hover {
+	color: primary();
+}
+#JavaScript:hover {
+	color: error(60%);
+}
+
+// In js/nav.js
+// Homepage: 'text--color-success',
+// HTML: 'text--color-warning',
+// CSS: 'text--color-primary',
+// JavaScript: 'text--color-error',
