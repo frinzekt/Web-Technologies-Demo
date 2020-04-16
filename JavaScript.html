@@ -1,212 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>JavaScript - Frinze Lapuz</title>
 
-		<!-- FAVICON -->
-		<link rel="apple-touch-icon" sizes="180x180" href="asset/favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="asset/favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="asset/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="asset/favicon/site.webmanifest" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>JavaScript - Frinze Lapuz</title>
 
-		<!-- Boostrap CSS -->
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-			crossorigin="anonymous"
-		/>
-		<!-- BUNDLED STYLED CSS -->
-		<link rel="stylesheet" href="css/style.css" />
-		<!-- FONT AWESOME -->
-		<script src="https://kit.fontawesome.com/a8ac385079.js" crossorigin="anonymous"></script>
-		<!-- HTML SYNTAX HIGHLIGHTER -->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-	</head>
+	<!-- FAVICON -->
+	<link rel="apple-touch-icon" sizes="180x180" href="asset/favicon/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="asset/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="asset/favicon/favicon-16x16.png" />
+	<link rel="manifest" href="asset/favicon/site.webmanifest" />
 
-	<body>
-		<div class="d-flex" id="wrapper">
-			<!-- Sidebar -->
-			<div id="sidebar-wrapper"></div>
+	<!-- Boostrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+	<!-- BUNDLED STYLED CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- FONT AWESOME -->
+	<script src="https://kit.fontawesome.com/a8ac385079.js" crossorigin="anonymous"></script>
+	<!-- HTML SYNTAX HIGHLIGHTER -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+</head>
 
-			<div id="page-content-wrapper">
-				<nav id="nav"></nav>
-				<article class="container">
-					<h3 class="title">JavaScript</h3>
-					<div>
-						<h4>What Is JavaScript in the Web?</h4>
-						<p>
-							JavaScript is the programming language that drives the interactivity of content in the web. It makes it intuitive and enhances
-							the user experience (UX) (Note: CSS focuses on user interface (UI)).
-						</p>
-					</div>
-					<div>
-						<h4>Asynchonous JavaScript and XML (AJAX)</h4>
-						<p>
-							AJAX is the dream of any web developer, to be able to fetch data without the need of refreshing the page. AJAX is a method
-							most often used with API sources serving data usually in the form of Javascript Object Notation (JSON) in order to fetch data.
-							This data could be anything, a response error, a payload or even HTML and CSS (most common for Single-page Applications).
-							Unlike a usual web HTTP request, AJAX is not only limited to GET request, it can also perform POST request that can contain an
-							request body that can be used for sending data to the server. There multiple "fake" HTML request that are supported in the
-							browser, such as PUT and DELETE, but only GET and POST are supported by HTML. See W3C HTML 5.0 spec.
-						</p>
+<body>
+	<div class="d-flex" id="wrapper">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper"></div>
 
-						<h5>Spotify Song Demo: AJAX and DOM Manipulation</h5>
-						<form onsubmit="searchSongs(event)">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="Search" name="search" />
-								<div class="input-group-btn">
-									<button class="btn btn-default" type="submit">
-										<i class="fas fa-search"></i>
-									</button>
-								</div>
-							</div>
-						</form>
-						<div id="ajax-demo" class="row"></div>
-					</div>
-					<div>
-						<h5>How It Works</h5>
-						<p>
-							Firstly, this web application will request authorization to access data. This specific web application is communicating with a
-							node server built by me that contains the secret keys in order to contact spotify server. The spotify server will respond to
-							the node server, then respond with an authentication that is stored as a variable here.
-						</p>
-						<p>
-							After the acquisition of authorization token, this web application will contact the spotify server as well as providing the
-							token. The spotify server will respond with the data specified in the endpoint. In this case, it will access the 3 Endpoints:
-							"search", "album" and "song" endpoints.
-						</p>
-						<p>
-							After acquiring all the data from the endpoints, it is packaged into a smaller object variable, and passed into functions that
-							will manipulate the DOM (add, remove songs)
-						</p>
-						<p>Unfortunately, some songs don't have preview url, in order to display as demo.</p>
-					</div>
-				</article>
-			</div>
-		</div>
-		<footer id="footer"></footer>
+		<!-- CONTENT -->
+		<div id="page-content-wrapper">
+			<!-- NAV -->
+			<nav id="nav"></nav>
+			<article class="container">
+				<h3 class="title">JavaScript</h3>
+				<!-- HISTORY -->
+				<div>
+					<h4>Brief History & Features</h4>
+					<p>Taken from <a href="https://www.youtube.com/watch?v=Sh6lK57Cuk4">here</a></p>
+					<p>Browser needed to be dynamic and interactive so it was modelled around the language Java</p>
+					<h5>1994: Mocha</h5>
+					<p>First JavaScript, but not called JavaScript and a syntax like JAva, but contained most of the
+						features used today such as:
+						<ul>
+							<li>First Class Functions</li>
+							<li>Dynamic Typing</li>
+							<li>Prototypal Inheritance</li>
+						</ul>
+					</p>
+					<h5>Early 1995: LiveScript -> Late 1995: JavaScript To 1996: JScript??</h5>
+					<p>Beta release of JavaScript was released around 1995. In 1996, Microsoft created Internet Explorer
+						(IE) and JScript which is identical to JavaScript</p>
+					<h5>1997: ECMAScript 2</h5>
+					<p>Due to the growing number of JavaScript, and different scripting language using different. There
+						was a need to standardize what a standard scripting language should be and have so ECMAScript is
+						born, but is missing a lot of features to what it has today</p>
+					<h5>1999: ES3</h5>
+					<p>New Features are implemented such as: <ul>
+							<li>Error Handling</li>
+							<li>Strict Equal Operator "==="</li>
+						</ul>
+					</p>
+					<h5>2000: Rebel Microsoft, AJAX, ES3.1 (Rejection of ES4)</h5>
+					<p>IE controlled most of the market share, Microsoft implemented many JavaScript extension without a
+						care with ECMASCRIPT because of this, web developers have a hard time developing a website that
+						works the same in all browser</p>
+					<h5>2006: jQuery</h5>
+					<p>One of the first JS library that works more reliable with by transpiling into JavaScript
+						supported by independent browser. Hence, fixing most of the browser support problem </p>
+					<h5>2008: Chrome and V8 Engine-> 2009: Node</h5>
+					<p>JavaScript became viable to be compiled and interpreted. Hence allowing possibility in high
+						performance computing and server-side. In 2009, nodejs was introduced built in V8 as a
+						server-side runtime running an event-loop to run event-driven non-blocking code (asynchronous)
+					</p>
+					<p>This made JavaScript one of the languages that can be used in a complete stack (the JS Everywhere
+						paradigm) </p>
 
-		<!-- Jquery -->
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+					<h5>2009: ES5</h5>
+					<p>Introduced a lot of awesome features such as: <ul>
+							<li>JSON Support</li>
+							<li>Functional Array and Object Method</li>
+							<li>Accessors (OOPD-like)</li>
+						</ul>
+					</p>
 
-		<!-- BOOSTRAP JS -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-			crossorigin="anonymous"
-		></script>
+					<h5>2010: JS Frameworks and CoffeeScript </h5>
+					<p>
+						Frameworks are created to solve the problem of keeping the UI in sync with the state as well as
+						allowing modularity in HTML (division through components). CoffeeScript is the
+						initial/"fire-starter" for transpiling (important in ES6)
+					</p>
+					<h5>2015: ES2015 / ES6</h5>
+					<p>Introduced more features for JavaScript to introduce more readable code, uniformity with other
+						languages, and asynchronous such as:
+						<ul>
+							<li>let and const</li>
+							<li>Promises</li>
+							<li>Arrow functions</li>
+							<li>Classes</li>
+						</ul>
+					</p>
+					<p>A problem though is that these features are not natively supported in old browsers. Hence,
+						transpilers were important to convert new code to old code that is supported in all browsers</p>
+				</div>
 
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-			crossorigin="anonymous"
-		></script>
 
-		<!-- My Bundled Component Script -->
-		<script src="dist/bundle.js"></script>
-		<!-- Specific Script -->
-		<script>
-			initNavBar('JavaScript');
-		</script>
-		<script>
-			const getToken = async () => {
-				const data = await (await fetch('https://spotify-token-authenticator.frinzelapuz.now.sh/api/token')).json();
-				localStorage.setItem('accessToken', data.accessToken);
-				return data.accessToken;
-			};
 
-			const addSong = ({ id, name, artist, preview_url, pictureUrl }) => {
-				const container = document.querySelector('#ajax-demo');
+				<!-- WHAT JAVASCRIPT IS -->
+				<div>
+					<h4>What Is JavaScript in the Web?</h4>
+					<p>
+						JavaScript is the programming language that drives the interactivity of content in the web by
+						using DOM manipulation which can extends to producing dynamic content for the web.
 
-				// Simulated JSX - JavaScript in XML/HTML
-				container.innerHTML += `<div class="col-md-12 col-sm-12 background--color-contrast-high text--color-white song" style="padding:10px;margin:0px">
-						<div class="row" style="margin:0px">
-							<div class="song-description col-md-6 col-sm-12" >
-								<div class="avatar-root">
-									<img class="avatar" src="${pictureUrl}" alt="" />
-								</div>
-								<div style="margin: 0px;">
-									<div style="margin: 0px;">
-										${name}
-									</div>
-									<div style="margin: 0px;">
-										${artist}
-									</div>
-								</div>
+					</p>
+				</div>
+				<!-- AJAX -->
+				<div>
+					<h4>Asynchonous JavaScript and XML (AJAX)</h4>
+					<p>
+						AJAX is the dream of any web developer, to be able to fetch data without the need of refreshing
+						the page. AJAX is a method
+						most often used with API sources serving data usually in the form of Javascript Object Notation
+						(JSON) in order to fetch data.
+						This data could be anything, a response error, a payload or even HTML and CSS (most common for
+						Single-page Applications).
+						Unlike a usual web HTTP request, AJAX is not only limited to GET request, it can also perform
+						POST request that can contain an
+						request body that can be used for sending data to the server. There multiple "fake" HTML request
+						that are supported in the
+						browser, such as PUT and DELETE, but only GET and POST are supported by HTML. See W3C HTML 5.0
+						spec.
+					</p>
 
-							</div>
-							<div class="col-md-6 col-sm-12 song-preview">
-								${
-									preview_url
-										? `<audio controls style="width:100%;height:3em"/>
-									<source
-										src="${preview_url}"
-										type="audio/mpeg">
-									Your browser does not support the audio element.
-								</audio>`
-										: `Preview Not Available `
-								}
+					<!-- AJAX DEMO -->
+					<h5>Spotify Song Demo: AJAX and DOM Manipulation</h5>
+					<p>Search the album or related singles you want to listen to down below.</p>
+					<form onsubmit="searchSongs(event)">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search Album" name="search" />
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit">
+									<i class="fas fa-search"></i>
+								</button>
 							</div>
 						</div>
-					</div>`;
-			};
-			const removeSongs = () => {
-				const container = document.querySelector('#ajax-demo');
-				container.innerHTML = '';
-			};
+					</form>
+					<div id="ajax-demo" class="row"></div>
+					<div class="d-flex justify-content-center">
+						<div class="loader" style="display: none;"></div>
+					</div>
+				</div>
+				<br />
+				<!-- EXPLANATION -->
+				<div>
+					<h5>How It Works</h5>
+					<p>
+						Firstly, this web application will request authorization to access data. This specific web
+						application is communicating with a
+						<a class="link" href="https://spotify-token-authenticator.frinzelapuz.now.sh/">node server built
+							by me</a> that contains the
+						secret keys in order to contact spotify server. The spotify server will respond to the node
+						server, then respond with an
+						authentication that is stored as a variable here.
+					</p>
+					<p>
+						After the acquisition of authorization token, this web application will contact the spotify
+						server as well as providing the
+						token. The spotify server will respond with the data specified in the endpoint. In this case, it
+						will access the 3 Endpoints:
+						"search", "album" and "song" endpoints.
+					</p>
+					<p>
+						After acquiring all the data from the endpoints, it is packaged into a smaller object variable,
+						and passed into functions that
+						will manipulate the DOM (add, remove songs)
+					</p>
+					<p>Something very interesting happens when you load songs. Take a look at the developer tools, under
+						the network tab.</p>
+					<p>Unfortunately, some songs don't have preview url, in order to display as demo.</p>
+				</div>
+			</article>
+		</div>
+	</div>
+	<footer id="footer"></footer>
 
-			const searchSongs = async (e) => {
-				e.preventDefault();
-				removeSongs();
-				const accessToken = await getToken();
-				const formData = $('form').serializeArray()[0].value;
-				const requestParams = {
-					method: 'GET',
-					headers: {
-						Authorization: 'Bearer ' + accessToken,
-						'Content-Type': 'application/json',
-						Accept: 'application/json',
-					},
-				};
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-				const spotifyData = await (
-					await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(formData.trim())}&type=album`, requestParams)
-				).json();
+	<!-- BOOSTRAP JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
 
-				//If Everything is a single, load all 20 singles
-				if (spotifyData.albums.items.every((album) => album.album_type == 'single')) {
-					spotifyData.albums.items.forEach((album) => loadSongs(album.id));
-				} else {
-					loadSongs(spotifyData.albums.items[0].id);
-				}
-			};
-			const loadSongs = async (trackId = '0MQpgi6zSeof8DKvc9ymZO', callbackfn) => {
-				const accessToken = await getToken();
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
 
-				const requestParams = {
-					method: 'GET',
-					headers: {
-						Authorization: 'Bearer ' + accessToken,
-					},
-				};
-				const spotifyData = await (await fetch(`https://api.spotify.com/v1/albums/${trackId}/tracks`, requestParams)).json();
-				const spotifyDataRFU = await spotifyData.items.map(async ({ name, id, artists, preview_url }) => {
-					const songIndividualData = await (await fetch(`https://api.spotify.com/v1/tracks/${id}`, requestParams)).json();
-					const pictureUrl = songIndividualData.album.images[0].url;
-					return {
-						id,
-						name,
-						artist: artists[0].name,
-						preview_url,
-						pictureUrl,
-					};
-				});
-				Promise.all(spotifyDataRFU).then((results) => results.map((song) => addSong(song)));
-			};
-			loadSongs();
-		</script>
-	</body>
+	<!-- My Bundled Component Script -->
+	<script src="dist/bundle.js"></script>
+	<!-- Page Specific Script -->
+	<script>
+		initNavBar('JavaScript');
+		window.isLoading = false;
+	</script>
+	<script src="js/spotify.js"></script>
+</body>
+
 </html>
