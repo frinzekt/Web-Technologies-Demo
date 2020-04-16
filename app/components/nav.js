@@ -27,7 +27,7 @@ const nav = `<div class="navbar-brand mb-0 h1"><a href="index.html" id="Homepage
 			<a class="nav-link" href="JavaScript.html"><i class="fab fa-js"></i> JavaScript</a>
 		</li>
 		<li class="nav-item" >
-			<a class="nav-link" id="menu-toggle">Toggle HTML Inspector</a>
+			<a class="nav-link html-inspector" id="menu-toggle">Toggle HTML Inspector</a>
 		</li>
 	</ul>
 </div>

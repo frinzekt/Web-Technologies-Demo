@@ -1,6 +1,8 @@
+//COMPONENT SYSTEM TO INTRODUCE LESS REPETITION IN CODE
+//Uses webpack to compile this bundle into dist/bundle.js
+
 //GLOBAL VARIABLES
 window.isDOMViewEnabled = false;
-
 
 import Appender from './HTMLappender';
 
