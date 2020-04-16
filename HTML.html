@@ -1,116 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>HyperText Markup Language - Frinze Lapuz</title>
 
-		<!-- FAVICON -->
-		<link rel="apple-touch-icon" sizes="180x180" href="asset/favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="asset/favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="asset/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="asset/favicon/site.webmanifest" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HyperText Markup Language - Frinze Lapuz</title>
 
-		<!-- Boostrap CSS -->
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-			crossorigin="anonymous"
-		/>
-		<!-- BUNDLED STYLED CSS -->
-		<link rel="stylesheet" href="css/style.css" />
-		<!-- FONT AWESOME -->
-		<script src="https://kit.fontawesome.com/a8ac385079.js" crossorigin="anonymous"></script>
-		<!-- HTML SYNTAX HIGHLIGHTER -->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-	</head>
+	<!-- FAVICON -->
+	<link rel="apple-touch-icon" sizes="180x180" href="asset/favicon/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="asset/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="asset/favicon/favicon-16x16.png" />
+	<link rel="manifest" href="asset/favicon/site.webmanifest" />
 
-	<body>
-		<div class="d-flex" id="wrapper">
-			<!-- Sidebar -->
-			<div id="sidebar-wrapper"></div>
+	<!-- Boostrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+	<!-- BUNDLED STYLED CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- FONT AWESOME -->
+	<script src="https://kit.fontawesome.com/a8ac385079.js" crossorigin="anonymous"></script>
+	<!-- HTML SYNTAX HIGHLIGHTER -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+</head>
 
-			<div id="page-content-wrapper">
-				<nav id="nav"></nav>
-				<article class="container">
-					<h3 class="title text--color-primary">HyperText Markup Language (HTML)</h3>
+<body>
+	<div class="d-flex" id="wrapper">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper"></div>
+
+		<div id="page-content-wrapper">
+			<nav id="nav"></nav>
+			<article class="container">
+				<h3 class="title text--color-primary">HyperText Markup Language (HTML)</h3>
+				<div id="intro">
 					<p>
 						This information is taken from
-						<a class="text--color-primary-lighter" href="https://www.w3schools.in/html-tutorial/history/">here</a>
+						<a class="text--color-primary" href="https://www.w3schools.in/html-tutorial/history/">here</a>
 					</p>
-					<div id="intro">
-						<h4 class="">What is it?</h4>
+					<h4 class="">What is it?</h4>
 
+					<p>
+						HTML is a standard markup language for documents to be displayed in web browser. It serves as
+						the layout of the document's
+						content in a web browser by using what's called Document Object Model (DOM) Tree
+					</p>
+				</div>
+				<div id="history">
+					<h4 class="">History</h4>
+					<div>
+						<h5 class="">1991-1993: Basic Creation (HTML 1.0)</h5>
 						<p>
-							HTML is a standard markup language for documents to be displayed in web browser. It serves as the layout of the document's
-							content in a web browser by using what's called Document Object Model(DOM) Tree
+							Tim Berners Lee created the HTML in the late 1991, and released HTML 1.0 in 1993. This is
+							created to share information that
+							is readable and accessible via web browsers
 						</p>
 					</div>
-					<div id="history">
-						<h4 class="">History</h4>
-						<div>
-							<h5 class="">1991-1993: Basic Creation (HTML 1.0)</h5>
-							<p>
-								Tim Berners Lee created the HTML in the late 1991, and released HTML 1.0 in 1993. This is created to share information that
-								is readable and accessible via web browsers
-							</p>
-						</div>
-						<div>
-							<h5 class="">1995-1997: Official Release of HTML (HTML 2.0)</h5>
-							<p>
-								Official publication of HTML as HTML 2.0 which contains all the features of HTML 1.0 along with additional features. HTML
-								became the official standard markup language for designing and creating websites, and refined various core features of HTML
-							</p>
-						</div>
-						<div>
-							<h5 class="">1997: (HTML 3.0)</h5>
-							<p>
-								HTML 3.0 was drafted by Dave Ragget which included new features of HTML, introducing more powerful features and
-								characteristics for designing webpage, but these features also slowed down the browser
-							</p>
-						</div>
-						<div>
-							<h5 class="">IDK: (HTML 4.01)</h5>
-							<p>a</p>
-						</div>
-						<div>
-							<h5 class="">2012 - Today: (HTML 5.0)</h5>
-							<p>a</p>
-						</div>
+					<div>
+						<h5 class="">1994-1995: Official Release of HTML (HTML 2.0)</h5>
+						<p>
+							Official publication of HTML as HTML 2.0 which contains all the features of HTML 1.0 along
+							with additional features. HTML
+							became the official standard markup language for designing and creating websites, and
+							refined various core features of HTML which made
+						</p>
 					</div>
-					<div id="elements"></div>
-				</article>
-			</div>
+					<div>
+						<h5 class="">1995-1997: CSS Introduction and LOTS OF CONFLICTED GOALS (HTML 3.0)</h5>
+						<p>
+							HTML 3.0 publication is a huge conflict. Many parties wanted
+							different features, and implemented those features which became a problem as there is no
+							single standard. A HTML document could look different in different browsers. Even though
+							HTML 3.0 was rejected multiple times, there was an agreed upon list of implemented features
+							at the end of the 1997:
+							<ul>
+								<li>Content NOT Presentation Markup
+									<p>Establishment of HTML as a structural/content markup rather than to make "things
+										pretty". This is supported by the need of platform independence (support for
+										different screen sizes, devices, presentation formats). This was particularly
+										difficult as presentation is most of the time linked to expression of
+										intention/message. </p>
+								</li>
+								<li>Support for Cascading Style Sheets
+									The key takeaway here is that there needs to be a way to express design without
+									incorporating with structure.</p>
+						</li>
+						<li>Support for Non-Visual Media
+							<p>Inline figures are polished especially with the use of table markups</p>
+						</li>
+						<li>Support for Different Ways Of Creating HTML
+							<p>There was an introduction of creating HTML with a variety of tools such as word
+								processing format or other SGML application. This is interesting as it is possible to
+								design a basic website in word processor such as Microsoft Word as an export. What You
+								See Is What You Get (WYSIWYG) feature is an important piece for reaching more user of
+								HTML as it is very straightforward</p>
+						</li>
+						</ul>
+						</>
+					</div>
+					<div>
+						<h5 class="">1988-1999: More removal of Presentational Tags, Object Multimedia, and Smart
+							Forms(HTML 4.01)</h5>
+						<p>Basic CSS has been introduced in order to separate some of the presentational layer from HTML
+							as well as trimming some of the old tags such as:
+
+							<span class="hljs-tag">&lt;ISINDEX&gt;</span>
+							<span class="hljs-tag">&lt;APPLET&gt;</span>
+							<span class="hljs-tag">&lt;CENTER&gt;</span>
+							<span class="hljs-tag">&lt;FONT&gt;</span>
+							<span class="hljs-tag">&lt;BASEFONT&gt;</span>
+							<span class="hljs-tag">&lt;S&gt;</span></<span>. Most of these are replaced with their css
+							counterparts, as the tag name suggest, these are old html tags that gives presentation.
+							Also, multimedia object are replaced to be more general with
+							<span class="hljs-tag">&lt;OBJECT&gt;</span>
+						</p>
+						<p>See more <a href="https://www.w3.org/TR/html4/appendix/changes.html">here</a></p>
+						<p>Moreover, there some new tags that were added such as :
+							<span class="hljs-tag">&lt;Q&gt;</span>
+							<span class="hljs-tag">&lt;ACRONYM&gt;</span>
+							<span class="hljs-tag">&lt;INS&gt;</span>
+							<span class="hljs-tag">&lt;DEL&gt;</span>
+							<span class="hljs-tag">&lt;COLGROUP&gt;</span>
+							<span class="hljs-tag">&lt;FIELDSET&gt;</span>
+							<span class="hljs-tag">&lt;LABEL&gt;</span>
+							<span class="hljs-tag">&lt;BUTTON&gt;</span> . Most of these complements the existing tags
+							specifically the "phrasal" (blockquote, strong, code, em) s and the form/input tags.
+						</p>
+					</div>
+					<div>
+						<h5 class="">2012 - Today: (HTML 5.0)</h5>
+						<p>One of the biggest change for the web technology as a whole. HTML5 is the integration of
+							several different technology (CSS, JavaScript, and server-based technologies) so this update
+							made it easier to update or integrate with the other technologies
+							<ul>
+								<li>Semantic markup: New tags that describe parts of a document such as<span
+										class="hljs-tag">&lt;NAV&gt;</span>, <span
+										class="hljs-tag">&lt;ARTICLE&gt;</span>, <span
+										class="hljs-tag">&lt;SECTION&gt;</span>, <span
+										class="hljs-tag">&lt;HEADER&gt;</span>, and <span
+										class="hljs-tag">&lt;FOOTER&gt;</span>.</li>
+
+								<li>New form elements: HTML5 forms have some major updates. There are several new
+									versions of the <span class="hljs-tag">&lt;INPUT&gt;</span> element, allowing users
+									to pick colors, numbers, e-mail addresses, and dates with easy-to-use elements.</li>
+
+								<li>Media elements: HTML5 has native support for audio and video with tags similar to
+									the <span class="hljs-tag">&lt;IMG&gt;</span> tag.</li>
+
+								<li>canvas tag:This allows creation of object and interface elements that are useful for
+									gaming, charts and visualizations.
+								</li>
+							</ul>
+						</p>
+						<p>Taken from <a
+								href="https://www.dummies.com/web-design-development/html/notable-changes-in-html5/">here</a>
+						</p>
+
+					</div>
+				</div>
+				<div id="Features">
+					<h4>Features</h4>
+					<p></p>
+				</div>
+			</article>
 		</div>
+	</div>
 
-		<footer id="footer"></footer>
+	<footer id="footer"></footer>
 
-		<!-- Jquery -->
-		<script
-			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-			crossorigin="anonymous"
-		></script>
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+	</script>
 
-		<!-- BOOSTRAP JS -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-			crossorigin="anonymous"
-		></script>
+	<!-- BOOSTRAP JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
 
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-			crossorigin="anonymous"
-		></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
 
-		<!-- My Bundled Component Script -->
-		<script src="dist/bundle.js"></script>
-		<!-- Specific Script -->
-		<script>
-			initNavBar('HTML');
-		</script>
-	</body>
+	<!-- My Bundled Component Script -->
+	<script src="dist/bundle.js"></script>
+	<!-- Specific Script -->
+	<script>
+		initNavBar('HTML');
+	</script>
+</body>
+
 </html>
