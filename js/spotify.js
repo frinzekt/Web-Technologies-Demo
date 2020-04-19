@@ -1,6 +1,14 @@
 const toggleLoading = () => {
 	$('.loader').toggle();
 	$('#ajax-demo').toggle();
+
+	//DISABLE BUTTON WHILE LOADING
+	if ($('#submit').attr('disabled')) {
+		$('#submit').attr('disabled', false);
+	} else {
+		$('#submit').attr('disabled', true);
+	}
+
 	window.isLoading = !window.isLoading;
 };
 
