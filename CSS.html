@@ -33,6 +33,7 @@
 			<nav id="nav"></nav>
 			<article class="container">
 				<h3 class="title">Cascading Style Sheets (CSS)</h3>
+				<!-- HISTORY AND FEATURES -->
 				<div id="history">
 					<h4>Brief History & Features</h4>
 					<p>Taken from <a href="https://www.sitesbay.com/css/css-history">CSS History</a>, <a
@@ -64,16 +65,48 @@
 					</div>
 					<div>
 						<h5>1998: CSS2</h5>
-						CSS was improved to add more features:
+						<p>CSS was improved to add more features:
+							<ul>
+								<li>positioning (absolute,relative,fixed)</li>
+								<li>Z-index (Defines which element is on top of another when overlapping)</li>
+								<li>Concept of Media Type (Accounting for different screen)</li>
+								<li>Bidirectional text</li>
+								<li>New Font Properties</li>
+							</ul>
+						</p>
+					</div>
+					<div>
+						<h5>1999-2018:CSS3</h5>
+						<p> CSS3 introduced modules that are divided into multiple stage of development as mentioned <a
+								href="https://blogs.adobe.com/creativecloud/the-evolution-of-css/">here</a> and <a
+								href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3">here</a>
+							CSS3 adds a lot more features that helps in aligning, and creating "modern" designs that are
+							used a lot in these days such as:</p>
 						<ul>
-							<li>positioning (absolute,relative,fixed)</li>
-							<li>Z-index (Defines which element is on top of another when overlapping)</li>
-							<li>Concept of Media Type (Accounting for different screen)</li>
-							<li>Bidirectional text</li>
-							<li>New Font Properties</li>
+							<li>
+								<p>CSS3 Attribute Selectors</p>
+								<p>This allows dynamic designs based on certain attributes of an element such as.
+									<pre><code class="hljs css">E[attr^=val]
+										eg.          a[href^='http://sales.']{color: teal;}</code></pre>
+								</p>
+								<p>This uses the wildcard "^" to indicate starting. There are other wildcards such as
+									"$" for end, "*" for anywhere match</p>
+							</li>
+							<li>
+								<p>Pseudo-classes</p>
+								<p>Allows some dynamic design that corresponds to certain JS events without the need to
+									use JS such as :link, :visited, :hover, :active, :focus</p>
+							</li>
+							<li>
+								<p>CSS 3 Colors</p>
+								<p>Prior to CSS3, it can only support hexadecimal format. Now there are various ways to
+									describe color such as RGB, HSL, HSLA, and Opacity</p>
+							</li>
+							<p>There are many more features implemented which can be found here in the <a
+									href="https://www.smashingmagazine.com/2010/06/50-new-useful-css-techniques-tools-and-tutorials/">50
+									new CSS tricks</a>, but these are the most important.</p>
 						</ul>
 					</div>
-					<div>h5</div>
 				</div>
 				<div>
 					<div id="demo">
@@ -170,6 +203,96 @@
 					</div>
 					<div id="box-model">
 						<h4>Box Model</h4>
+						<div class="row d-flex justify-content-center">
+							<div class="col-md-6 col-sm-12">
+								<p>The box model is one of the most important to understand in order to make sure
+									elements are in their corresponding right sizes. The box model displays the sizes of
+									individual element parts that affects its sizes. This can be seen in the adjacent
+									images taken from <a
+										href="https://medium.com/@DaphneWatson/css-box-model-for-beginners-45b93061c8e1">here</a>
+								</p>
+								<p>It is composed of :
+									<ul>
+										<li>
+											<p>Margin</p>
+											<p>It defines the spacing of the element from the screen or from other
+												elements (depending on the positioning css attribute) </p>
+										</li>
+										<li>
+											<p>Outline (related, but does not belong to the box model)</p>
+											<p>Just like the border, excepts adjusting the size of the outline makes it
+												extends inwards which means that the total size of the element does not
+												actually increase unlike border. Due to irrelavance in size, it does not
+												belong to the box model.</p>
+										</li>
+										<li>
+											<p>Border</p>
+											<p>It defines the size of line that surrounds the whole element.</p>
+										</li>
+										<li>
+											<p>Padding</p>
+											<p>It defines the size of the outer shell of the content</p>
+										</li>
+										<li>
+											<p>Content Dimension</p>
+											<p>It defines the actual size of the content, and can be adjusted using the
+												properties
+												<span class="hljs-tag">width</span>,and <span
+													class="hljs-tag">height</span>
+											</p>
+										</li>
+									</ul>
+								</p>
+							</div>
+							<div class="col-md-5 col-sm-12">
+								<img src="./asset/img/box_model.png" alt="box_model">
+								<p>
+									Many examples can be seen throughout the website, but here is a very specific
+									example outlining all. Use the HTML live inspector to see (inline styling)
+								</p>
+
+								<div class="d-flex align-middle justify-content-center" style="background:#BCD0E0">
+									<div class="text-center text--color-white" id="exampleBoxModel" style="width:250px;height:100px;background:#97C46E; padding:10px;background-image:linear-gradient(to bottom, #97C46E 0%,#97C46E 100%), linear-gradient(to bottom, #D7CBA9 0%,#D7CBA9 100%);
+    background-clip: content-box, padding-box;border:10px solid;border-color: #FEB029;margin:10px">
+										Content
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+					<div id="selectors">
+						<h4>CSS Selectors</h4>
+						<p>CSS Selectors is the most important features in CSS as it is the main method to link design
+							to HTML elements. CSS Selectors are classified in the following:</p>
+						<ul>
+							<li>
+								<p>Tag Selectors</p>
+								<p>Applicable for directly applying designs directly to an HTML tag</p>
+							</li>
+							<li>
+								<p>Class Selectors</p>
+								<p>Applicable for directly applying designs toward a group of elements.</p>
+							</li>
+							<li>
+								<p>ID Selectors</p>
+								<p>Applicable for directly applying designs toward as specific element </p>
+							</li>
+							<li>
+								<p>Pseudo Class Selectors</p>
+								<p>Applicable for applying design for particular scenario such as :first-child,
+									:last-child</p>
+							</li>
+							<li>
+								<p>Attribute Selectors</p>
+								<p>Applicable for applying designs for elements that has a specific attribute. Very
+									useful for applying design such as all checkbox that has been ticked</p>
+							</li>
+						</ul>
+
+						<p>Examples of these selectors can be seen in css files of this website.</p>
 					</div>
 
 				</div>
